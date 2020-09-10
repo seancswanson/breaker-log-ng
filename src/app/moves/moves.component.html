@@ -5,11 +5,19 @@
 </div>
 
 <div>
-  <span>style:</span> {{ move.style }}
+  <label>style:
+    <select [(ngModel)]="move.style" name="style" id="cars">
+      <option value="Top Rock">Top Rock</option>
+      <option value="Footwork">Footwork</option>
+      <option value="Power">Power</option>
+      <option value="Freeze">Freeze</option>
+      <option value="Burn">Burn</option>
+    </select>
+  </label>
 </div>
 
 <div>
   <label>name:
-    <input [(ngModel)]="move.name" type="text" placeholder="name">
+    <input [(ngModel)]="move.name" placeholder="name">
   </label>
 </div>
