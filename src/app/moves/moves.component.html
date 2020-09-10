@@ -1,23 +1,37 @@
-<h2>{{ move.name | uppercase}} Details</h2>
+<h2>My Moves</h2>
+<ul class="moves">
+  <li *ngFor="let move of moves">
+    <span class="badge">{{ move.id }}</span> {{ move.name }}
+  </li>
+</ul>
+<!-- 
+<div *ngFor="let move of moves">
+  <h2>{{ move.name | uppercase}} Details</h2>
 
-<div>
-  <span>id:</span> {{ move.id }}
-</div>
+  <div>
+    <span>id:</span> {{ move.id }}
+  </div>
 
-<div>
-  <label>style:
-    <select [(ngModel)]="move.style" name="style" id="cars">
-      <option value="Top Rock">Top Rock</option>
-      <option value="Footwork">Footwork</option>
-      <option value="Power">Power</option>
-      <option value="Freeze">Freeze</option>
-      <option value="Burn">Burn</option>
-    </select>
-  </label>
-</div>
+  <div>
+    <label>style:
+      <select [(ngModel)]="move.style" name="style" id="cars">
+        <option value="Top Rock">Top Rock</option>
+        <option value="Footwork">Footwork</option>
+        <option value="Floor Rock">Floor Rock</option>
+        <option value="Power">Power</option>
+        <option value="Freeze">Freeze</option>
+        <option value="Burn">Burn</option>
+        <option value="Blowup">Blowup</option>
+        <option value="Drop">Drop</option>
+        <option value="Hop">Hop</option>
+        <option value="Floats">Floats</option>
+      </select>
+    </label>
+  </div>
 
-<div>
-  <label>name:
-    <input [(ngModel)]="move.name" placeholder="name">
-  </label>
-</div>
+  <div>
+    <label>name:
+      <input [(ngModel)]="move.name" placeholder="name">
+    </label>
+  </div>
+</div> -->
