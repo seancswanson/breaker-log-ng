@@ -1,1 +1,31 @@
-/* You can add global styles to this file, and also import other style files */
+/* Application-wide Styles */
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+app-root {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  background-image: url("https://www.transparenttextures.com/patterns/absurdity.png");
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+}
+
+.app-section-header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.app-section-title {
+  text-transform: uppercase;
+  font-size: 12px !important;
+  border-bottom: 1px dotted black;
+}
