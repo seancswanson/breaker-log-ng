@@ -1,5 +1,5 @@
 export interface Move {
-    id: number,
+    id?: number,
     style: string,
     name: string,
 }

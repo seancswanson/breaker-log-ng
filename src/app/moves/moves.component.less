@@ -6,3 +6,43 @@
   width: 85vw;
   margin: 0 auto;
 }
+
+.moves-container {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  max-height: 200vw;
+  overflow: hidden;
+  transition: max-height .5s ease;
+
+  &.collapsed {
+    max-height: 0px;
+  }
+}
+
+.move-wrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+  border-radius: 2px;
+  border: 1px dotted rgba(0, 0, 0, 0.3);
+  box-shadow: none;
+  transition: all .2s ease;
+
+  &:hover {
+    box-shadow: 0 0 11px rgba(33, 33, 33, .2);
+    cursor: pointer;
+  }
+
+  .id-badge {
+    padding: 10px;
+    flex-basis: 30px;
+    margin-right: 15px;
+    text-align: center;
+    background: #eee;
+  }
+
+  .name {
+    flex: 1;
+  }
+}
