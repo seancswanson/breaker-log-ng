@@ -1,0 +1,15 @@
+<h2>{{ move.name | uppercase}} Details</h2>
+
+<div>
+  <span>id:</span> {{ move.id }}
+</div>
+
+<div>
+  <span>style:</span> {{ move.style }}
+</div>
+
+<div>
+  <label>name:
+    <input [(ngModel)]="move.name" type="text" placeholder="name">
+  </label>
+</div>
