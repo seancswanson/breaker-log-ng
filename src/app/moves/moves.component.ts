@@ -9,7 +9,7 @@ import { makeGroupedArray } from '../group-moves';
 })
 export class MovesComponent implements OnInit {
 
-  groupedMovesArr: any[] = makeGroupedArray();
+  groupedMoves: any[] = makeGroupedArray();
 
   status: CollapseStatus = {
     'Top Rock': false,

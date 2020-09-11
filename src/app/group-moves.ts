@@ -1,6 +1,7 @@
 import { MOVES } from './mock-moves';
 import { Move } from './move';
 
+// What would this look like with recursion?
 export function makeGroupedArray() {
     // Make keep track of what bucket of the groupedArray we are in.
     let j = 0;

@@ -7,16 +7,28 @@
   margin: 0 auto;
 }
 
+.section-collapse-arrow {
+  display: inline-block;
+  margin-left: 10px;
+  transform: rotate(90deg);
+  transition: transform .2s linear;
+
+  &.collapsed {
+    transform: rotate(0);
+  }
+}
+
 .moves-container {
   display: flex;
   flex-direction: column;
   height: auto;
   max-height: 200vw;
   overflow: hidden;
-  transition: max-height .5s ease;
+  transition: max-height .3s ease;
 
   &.collapsed {
     max-height: 0px;
+
   }
 }
 
