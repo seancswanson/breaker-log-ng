@@ -67,10 +67,22 @@ export const MOVES: Move[] = [
     },
     {
         name: "6 step",
-        style: "Top Rock",
+        style: "Footwork",
     },
     {
         name: "Coffee Grinder",
         style: "Footwork",
+    },
+    {
+        name: "CiCi",
+        style: "Footwork",
+    },
+    {
+        name: "Windmill",
+        style: "Power",
+    },
+    {
+        name: "Flare",
+        style: "Power",
     }
 ]

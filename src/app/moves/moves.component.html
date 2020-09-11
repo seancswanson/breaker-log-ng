@@ -12,6 +12,17 @@
   </div>
 </div>
 
+<!-- For when I figure out how to  programmitcally loop through all moves. -->
+<!-- <div class="moves" *ngFor="let style of organizedMoves">
+  <h3 (click)="toggleCollapse(style)">{{ style }}></h3>
+  <div class="moves-container" [ngClass]="status[style] ? 'collapsed' : ''">
+    <div class="move-wrapper" *ngFor="let move of style">
+      <span class="id-badge">{{ move.id }}</span>
+      <span class="name">{{ move.name }}</span>
+    </div>
+  </div>
+</div> -->
+
 <!-- 
 <div *ngFor="let move of moves">
   <h2>{{ move.name | uppercase}} Details</h2>

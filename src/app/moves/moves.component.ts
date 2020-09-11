@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Move } from '../move';
-import { OrganizedMoves } from '../organized-moves';
 import { CollapseStatus } from '../collapse-status';
-import { MOVES } from '../mock-moves';
+import { makeGroupedArray } from '../group-moves';
 
 @Component({
   selector: 'app-moves',
@@ -10,13 +8,8 @@ import { MOVES } from '../mock-moves';
   styleUrls: ['./moves.component.less']
 })
 export class MovesComponent implements OnInit {
-  moves = MOVES;
-  organizedMoves: OrganizedMoves = {
-    'Top Rock': [],
-    'Footwork': []
-  };
 
-  organizedMovesArr: [];
+  groupedMovesArr: any[] = makeGroupedArray();
 
   status: CollapseStatus = {
     'Top Rock': false,
@@ -24,11 +17,6 @@ export class MovesComponent implements OnInit {
   };
 
   constructor() {
-    // console.log(Object.values(this.organizedMoves))
-    MOVES.map((move, i) => {
-      move.id = i + 1;
-      this.organizedMoves[move.style].push(move);
-    });
   }
 
   ngOnInit(): void {
@@ -37,6 +25,4 @@ export class MovesComponent implements OnInit {
   toggleCollapse(style) {
     this.status[style] = !this.status[style];
   }
-
-
 }
