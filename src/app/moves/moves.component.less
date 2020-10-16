@@ -7,6 +7,33 @@
   margin: 0 auto;
 }
 
+.selected-move-container {
+  background: rgba(255,255,255,0.6);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px dotted transparent;
+  box-shadow: none;
+  height: auto;
+  max-height: 0vw;
+  transition: max-height .3s ease, border .3s ease, box-shadow .3s ease;
+
+  .selected-move-wrapper {
+    overflow: hidden;
+    padding: 10px;
+
+    .selected-move-header {
+      margin: 0;
+    }
+  }
+
+  &.shown {
+    max-height: 200px;
+    border: 1px dotted rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 7px rgba(33, 33, 33, .2);
+  }
+}
+
 .section-collapse-arrow {
   display: inline-block;
   margin-left: 10px;
@@ -29,7 +56,6 @@
 
   &.collapsed {
     max-height: 0px;
-
   }
 }
 

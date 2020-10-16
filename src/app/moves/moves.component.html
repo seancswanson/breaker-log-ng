@@ -13,14 +13,16 @@
 </div> -->
 
 <!-- For when I figure out how to  programmitcally loop through all moves. -->
-<div *ngIf="selectedMove" class="selected-move-wrapper">
-  <h3>{{selectedMove.name | uppercase}} Details:</h3>
-  <div><span>id: </span>{{selectedMove.id}}</div>
-  <div>
-    <label>name:
-      <input [(ngModel)]="selectedMove.name" placeholder="name" />
-    </label>
-  </div>{{selectedMove.style}}
+<div [class.shown]="selectedMove" class="selected-move-container">
+  <div *ngIf="selectedMove" class="selected-move-wrapper">
+    <h3 class="selected-move-header">{{selectedMove.name | uppercase}} Details:</h3>
+    <div><span>id: </span>{{selectedMove.id}}</div>
+    <div>
+      <label>name:
+        <input [(ngModel)]="selectedMove.name" placeholder="name" />
+      </label>
+    </div>{{selectedMove.style}}
+  </div>
 </div>
 <div class="moves" *ngFor="let style of groupedMoves">
   <h3 (click)="toggleCollapse(style)">{{ style[0].style }}<span class="section-collapse-arrow"
