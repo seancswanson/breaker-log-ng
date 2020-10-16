@@ -19,11 +19,38 @@
   transition: max-height .3s ease, border .3s ease, box-shadow .3s ease;
 
   .selected-move-wrapper {
+    position: relative;
     overflow: hidden;
     padding: 10px;
 
     .selected-move-header {
       margin: 0;
+    }
+
+    .close-button {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      font-size: 12px;
+      opacity: 0.2;
+      height: 14px;
+      border: 1px solid transparent;
+      width: 12px;
+      text-align: center;
+      background: transparent;
+      cursor: pointer;
+      transition: background .3s ease, opacity .3s ease;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    &:hover {
+      .close-button {
+        opacity:0.5;
+        background: #eee;
+      }
     }
   }
 

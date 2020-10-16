@@ -22,6 +22,7 @@
         <input [(ngModel)]="selectedMove.name" placeholder="name" />
       </label>
     </div>{{selectedMove.style}}
+    <div class="close-button" (click)="clearSelectedMove()">&times;</div>
   </div>
 </div>
 <div class="moves" *ngFor="let style of groupedMoves">

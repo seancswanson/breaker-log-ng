@@ -32,4 +32,8 @@ export class MovesComponent implements OnInit {
     this.selectedMove = move;
     console.log(this.selectedMove)
   }
+
+  clearSelectedMove(move: Move) {
+    this.selectedMove = undefined;
+  }
 }
