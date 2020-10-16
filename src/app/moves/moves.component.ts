@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CollapseStatus } from '../collapse-status';
 import { makeGroupedArray } from '../group-moves';
+import { Move } from '../move';
 
 @Component({
   selector: 'app-moves',
@@ -8,6 +9,7 @@ import { makeGroupedArray } from '../group-moves';
   styleUrls: ['./moves.component.less']
 })
 export class MovesComponent implements OnInit {
+  selectedMove: Move;
 
   groupedMoves: any[] = makeGroupedArray();
 
@@ -24,5 +26,10 @@ export class MovesComponent implements OnInit {
 
   toggleCollapse(style) {
     this.status[style] = !this.status[style];
+  }
+
+  onSelect(move: Move) {
+    this.selectedMove = move;
+    console.log(this.selectedMove)
   }
 }
